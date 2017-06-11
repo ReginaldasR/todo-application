@@ -3,6 +3,7 @@ var bodyParser = require('body-parser')
 var cors = require('cors')
 var morgan = require('morgan')
 var app = express()
+var conf = require('./lib/config')
 
 //middleware
 app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
@@ -15,7 +16,6 @@ app.use(cors());
 app.get('/', function(req, res) {
 	res.json({msg: "hello"})
 })
-
-app.listen(4000);
+app.listen(conf.port);
 
 module.exports = app;
