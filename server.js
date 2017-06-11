@@ -13,9 +13,9 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(morgan('dev'));                                         // log every request to the console
 app.use(cors());
 
-app.get('/', function(req, res) {
-	res.json({msg: "hello"})
-})
+//router
+require('./lib/router')(app)
+
 app.listen(conf.port);
 
 module.exports = app;
