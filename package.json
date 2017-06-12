@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
+    "start": "./node_modules/.bin/nodemon server.js",
     "unit_test": "./node_modules/.bin/mocha \"**/test/*.unit.test.js\""
   },
   "repository": {
@@ -25,6 +25,7 @@
     "morgan": "^1.8.2"
   },
   "devDependencies": {
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "nodemon": "^1.11.0"
   }
 }
