@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "./node_modules/.bin/nodemon server.js",
     "unit_test": "./node_modules/.bin/mocha \"**/test/*.unit.test.js\"",
-    "ftests": "./node_modules/.bin/karma start public/karma.conf.js"
+    "ftests": "./node_modules/.bin/karma start client/app/karma.conf.js"
   },
   "repository": {
     "type": "git",
