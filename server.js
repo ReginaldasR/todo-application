@@ -16,6 +16,8 @@ app.use(cors());
 //router
 require('./lib/router')(app)
 
-app.listen(conf.port);
+app.listen(conf.port, function() {
+	console.log('Running server on port='+conf.port);
+});
 
 module.exports = app;
