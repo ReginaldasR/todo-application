@@ -1,5 +1,19 @@
-<html>
-	<body>
-		<h1>HELLO WORLD</h1>
-	</body>
+<!doctype html>
+<html ng-app="todo">
+
+<head>
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="./scripts/todoApp.js" ></script>
+</head>
+
+<body>
+	<h1>Crappy ToDo</h1>
+
+	<div style="display:inline-block" ng-controller="TodoController" ng-repeat="todo in todos">
+		<span>id: {{todo.id}}</span>
+		<span>name: {{todo.name}}</span>
+		<span>done: {{todo.done}}</span>
+	</div>
+</body>
+
 </html>
