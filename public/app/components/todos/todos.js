@@ -1,15 +1,12 @@
 'use strict';
 angular.module('app')
     .config(function ($stateProvider) {
-        $stateProvider
-            .state('todos', {
-				parent: 'site',
-                url: '/todos',
-                views: {
-                    'content@': {
-                        templateUrl: 'app/todos/todos.html',
-                        controller: 'TodosController'
-                    }
-                },
-            });
+        var todos = {
+            name: 'todos',
+            url: '/todos',
+            templateUrl: 'app/components/todos/todos.html',
+            controller: 'TodosController'
+        }
+
+        $stateProvider.state(todos);
     });
