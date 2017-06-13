@@ -6,13 +6,14 @@
 	<script type="text/javascript" src="./scripts/todoApp.js" ></script>
 </head>
 
-<body>
+<body ng-controller="TodoController">
 	<h1>Crappy ToDo</h1>
 
-	<div style="display:inline-block" ng-controller="TodoController" ng-repeat="todo in todos">
-		<span>id: {{todo.id}}</span>
-		<span>name: {{todo.name}}</span>
-		<span>done: {{todo.done}}</span>
+	<div ng-repeat="todo in todos">
+		<div>id: {{todo.id}}</div>
+		<div>name: {{todo.name}}</div>
+		<div>done: {{todo.done}}</div>
+		<div>&nbsp;</div>
 	</div>
 </body>
 
