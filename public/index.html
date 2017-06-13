@@ -1,20 +1,15 @@
 <!doctype html>
-<html ng-app="todo">
-
-<head>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	<script type="text/javascript" src="./scripts/todoApp.js" ></script>
-</head>
-
-<body ng-controller="TodoController">
-	<h1>Crappy ToDo</h1>
-
-	<div ng-repeat="todo in todos">
-		<div>id: {{todo.id}}</div>
-		<div>name: {{todo.name}}</div>
-		<div>done: {{todo.done}}</div>
-		<div>&nbsp;</div>
-	</div>
-</body>
-
+<html>
+	<head>
+	</head>
+	<body ng-app="app">
+		<div ui-view></div>
+		
+		<script src="./bower_components/angular/angular.min.js"></script>
+		<script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		
+		<script src="./app.js"></script>
+		<script src="./scripts/app/todos/todos.controller.js"></script>
+		<script src="./scripts/app/todos/todos.js"></script>
+	</body>
 </html>

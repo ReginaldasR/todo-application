@@ -1,0 +1,15 @@
+{
+  "name": "todo-web",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "reginaldas",
+    "vycka"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ReginaldasR/todo-application",
+  "dependencies": {
+    "angular-ui-router": "^1.0.4",
+    "angular": "^1.6.4"
+  }
+}
