@@ -18,8 +18,8 @@ require('./lib/router')(app)
 
 app.use(express.static('client/app')) // Serve static folder
 app.get('*', function(req, res) {
-        res.sendfile('./client/app/index.html'); // load the single view file (angular will handle the page changes on the front-end)
-    });
+    res.sendfile('./client/app/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+});
 app.listen(conf.port, function() {
 	console.log('Running server on port='+conf.port);
 });
