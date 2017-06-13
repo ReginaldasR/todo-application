@@ -16,6 +16,7 @@ app.use(cors());
 //router
 require('./lib/router')(app)
 
+app.use(express.static('public')) // Serve static folder
 app.listen(conf.port, function() {
 	console.log('Running server on port='+conf.port);
 });
