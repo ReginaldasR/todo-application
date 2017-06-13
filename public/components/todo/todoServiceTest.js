@@ -9,8 +9,8 @@ describe('ToDo service', function () {
   const firstTodo = { "id": 1, "name": "First test todo", "done": false };
   const secondTodo = { "id": 2, "name": "Second test todo", "done": true };
 
-  beforeEach(inject(function (_todoService_, _$httpBackend_) {
-    todoService = _todoService_;
+  beforeEach(inject(function (_TodoService_, _$httpBackend_) {
+    todoService = _TodoService_;
     $httpBackend = _$httpBackend_;
     $httpBackend.when('GET', '/api/todos').respond([firstTodo, secondTodo]);
   }));

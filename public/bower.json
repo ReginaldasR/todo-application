@@ -10,6 +10,7 @@
   "homepage": "https://github.com/ReginaldasR/todo-application",
   "dependencies": {
     "angular-ui-router": "^1.0.4",
-    "angular": "^1.6.4"
+    "angular": "^1.6.4",
+    "angular-mocks": "^1.6.4"
   }
 }
