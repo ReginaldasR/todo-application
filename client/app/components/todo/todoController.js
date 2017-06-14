@@ -1,7 +1,9 @@
 'use strict';
 angular.module('todo')
     .controller('TodoController', function ($scope, $http, TodoService) {
-			TodoService.getTodoList().then(function(response) {
+		$scope.todo = {};
+
+		TodoService.getTodoList().then(function(response) {
 				$scope.todos = response.data;
 			},
 			function(err) {
@@ -10,6 +12,22 @@ angular.module('todo')
 		);
 
 		$scope.update = function(todo) {
-			todo.done = !todo.done;
+			console.log(todo);
+			todo.done = todo.done == true;
+			TodoService.saveTodo(todo).then(function(response){
+			}, function(response) {
+				console.log('error');
+			})
+		}
+
+		$scope.save = function() {
+			TodoService.saveTodo($scope.todo).then(function(response) {
+				console.log(response.data.todo);
+				$scope.todos.push(response.data.todo);
+				$scope.todo = {};
+			},
+			function(err) {
+				console.log(err);
+			})
 		}
 	});
