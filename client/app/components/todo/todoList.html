@@ -1,10 +1,16 @@
+<style>
+	.done {
+		text-decoration: line-through;
+		color: #b2b2b2;
+	}
+</style>
+
 <div>
 	<h1>Crappy ToDo</h1>
 
 	<div ng-repeat="todo in todos">
-		<div>id: {{todo.id}}</div>
-		<div>name: {{todo.name}}</div>
-		<div>done: {{todo.done}}</div>
-		<div>&nbsp;</div>
+		<span ng-class="{'done': todo.done}">
+			<input type="checkbox" ng-checked="todo.done" ng-model="todo.done"> {{todo.name}}
+		</span>
 	</div>
 </div>
