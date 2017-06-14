@@ -37,7 +37,7 @@
 			<div class="listOfTodos">
 				<div ng-repeat="todo in todos">
 					<span class='pointerItem' ng-class="{'done': todo.done}" ng-click="update(todo)">
-						<input type="checkbox" ng-checked="todo.done" ng-model="todo.done"> {{todo.name}}
+						<input type="checkbox" ng-checked="todo.done" > {{todo.name}}
 					</span>
 				</div>
 			</div>			

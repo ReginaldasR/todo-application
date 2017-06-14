@@ -12,8 +12,8 @@ angular.module('todo')
 		);
 
 		$scope.update = function(todo) {
-			console.log(todo);
-			todo.done = todo.done == true;
+			// console.log(todo);
+			todo.done = !todo.done;
 			TodoService.saveTodo(todo).then(function(response){
 			}, function(response) {
 				console.log('error');
@@ -24,7 +24,7 @@ angular.module('todo')
 			TodoService.saveTodo($scope.todo).then(function(response) {
 				console.log(response.data.todo);
 				$scope.todos.push(response.data.todo);
-				$scope.todo = {};
+				$scope.todo = {}; 
 			},
 			function(err) {
 				console.log(err);
