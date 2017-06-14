@@ -26,6 +26,8 @@
     "morgan": "^1.8.2"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-karma": "0.0.5",
     "jasmine-core": "^2.6.3",
     "karma": "^1.7.0",
     "karma-chrome-launcher": "^2.1.1",
