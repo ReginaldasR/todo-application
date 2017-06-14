@@ -13,6 +13,7 @@ describe('ToDo service', function () {
     todoService = _TodoService_;
     $httpBackend = _$httpBackend_;
     $httpBackend.when('GET', '/api/todos').respond([firstTodo, secondTodo]);
+    $httpBackend.when('PUT', '/api/todos/1', firstTodo).respond({status: true, todo: firstTodo});
   }));
 
   it('should return todo list', function (done) {
@@ -20,6 +21,15 @@ describe('ToDo service', function () {
       expect(response.data.length).toEqual(2);
       expect(response.data[0]).toEqual(firstTodo);
       expect(response.data[1]).toEqual(secondTodo);
+      done();
+    });
+    $httpBackend.flush();
+  });
+
+  it('should return updated todo', function (done) {
+    todoService.updateTodo(firstTodo).then(function (response) {
+      console.log(response.data)
+      expect(response.data).toEqual({status: true, todo: firstTodo});
       done();
     });
     $httpBackend.flush();
