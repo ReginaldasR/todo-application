@@ -8,4 +8,8 @@ angular.module('todo')
 				console.log(err)
 			}
 		);
+
+		$scope.update = function(todo) {
+			todo.done = !todo.done;
+		}
 	});

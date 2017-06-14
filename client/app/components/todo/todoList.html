@@ -3,13 +3,16 @@
 		text-decoration: line-through;
 		color: #b2b2b2;
 	}
+	.pointerItem {
+		cursor: default;
+	}
 </style>
 
 <div>
 	<h1>Crappy ToDo</h1>
 
 	<div ng-repeat="todo in todos">
-		<span ng-class="{'done': todo.done}">
+		<span class='pointerItem' ng-class="{'done': todo.done}" ng-click="update(todo)">
 			<input type="checkbox" ng-checked="todo.done" ng-model="todo.done"> {{todo.name}}
 		</span>
 	</div>
