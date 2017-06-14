@@ -5,21 +5,43 @@
 	}
 	.pointerItem {
 		cursor: default;
+		margin-top: 5px;
+	}
+
+	.todoapp {
+	background: #fff;
+	margin: 10px 0 0px 0;
+	position: relative;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
+	}
+	.listOfTodos {
+		margin-top: 30px;
 	}
 </style>
 
 <div>
-	<h1>Crappy ToDo</h1>
-		<div class="input-group">
-			<input type="text" class="form-control" 
-			placeholder="Todo" 
-			aria-describedby="basic-addon1" 
-			ng-model="todo.name"
-			ng-enter="save()">
+	<div class="row">
+		<div class="col-lg-9 col-md-offset-4">
+			<h1>Crappy ToDo</h1>
+			<div class="row center-block">
+				<div class="input-group col-lg-6">
+					<input type="text" class="form-control todoapp" 
+					placeholder="Todo" 
+					aria-describedby="basic-addon1" 
+					ng-model="todo.name"
+					ng-enter="save()">
+				</div>
+			</div>
+			
+			<div class="listOfTodos">
+				<div ng-repeat="todo in todos">
+					<span class='pointerItem' ng-class="{'done': todo.done}" ng-click="update(todo)">
+						<input type="checkbox" ng-checked="todo.done" ng-model="todo.done"> {{todo.name}}
+					</span>
+				</div>
+			</div>			
 		</div>
-	<div ng-repeat="todo in todos">
-		<span class='pointerItem' ng-class="{'done': todo.done}" ng-click="update(todo)">
-			<input type="checkbox" ng-checked="todo.done" ng-model="todo.done"> {{todo.name}}
-		</span>
 	</div>
+
 </div>
