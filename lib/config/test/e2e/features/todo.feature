@@ -3,11 +3,11 @@ Feature: Example feature
   I want to be able to see initial todo list
 
   Scenario: Displaying sigle todo
-    Given I am on homepage
-    And one todo exists
+    Given one todo exists
+    And I am on homepage
     Then I should see 1 todo
 
   Scenario: Displaying two todos
-    Given I am on homepage
-    And two todos exists
+    Given two todos exists
+    And I am on homepage
     Then I should see 2 todo
