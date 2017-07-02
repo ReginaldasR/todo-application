@@ -6,7 +6,8 @@
         },
         "response": {
             "headers": {
-                "content-type": "application/json"
+                "content-type": "application/json",
+                "Connection": "close"
             },
             "status": 200,
             "body": [
