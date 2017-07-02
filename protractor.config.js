@@ -13,8 +13,8 @@ exports.config = {
     // require step definitions
     require: [
       'lib/config/test/e2e/steps/**/*.steps.js', // accepts a glob
-      'lib/config/test/e2e/steps/**/hooks.js',
-      'lib/config/test/e2e/steps/**/timout.conf.js'
+      'lib/config/test/e2e/steps/hooks.js',
+      'lib/config/test/e2e/support/**/*.js'
     ]
   }
 };
