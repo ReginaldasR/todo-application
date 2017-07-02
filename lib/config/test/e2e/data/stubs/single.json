@@ -1,0 +1,21 @@
+[
+    {
+        "request": {
+            "url": "/api/todos",
+            "method": "GET"
+        },
+        "response": {
+            "headers": {
+                "content-type": "application/json"
+            },
+            "status": 200,
+            "body": [
+                {
+                    "id": 1,
+                    "name": "Single todo",
+                    "done": false
+                }
+            ]
+        }
+    }
+]

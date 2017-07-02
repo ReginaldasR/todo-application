@@ -28,6 +28,7 @@
     "morgan": "^1.8.2"
   },
   "devDependencies": {
+    "bluebird": "^3.5.0",
     "chai": "^4.0.2",
     "chai-as-promised": "^7.0.0",
     "chromedriver": "^2.30.1",
@@ -40,6 +41,7 @@
     "mocha": "^3.4.2",
     "nodemon": "^1.11.0",
     "protractor": "^5.1.2",
-    "protractor-cucumber-framework": "^3.1.2"
+    "protractor-cucumber-framework": "^3.1.2",
+    "stubby": "^4.0.0"
   }
 }

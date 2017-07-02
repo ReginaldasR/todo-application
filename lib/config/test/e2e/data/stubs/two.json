@@ -1,0 +1,26 @@
+[
+    {
+        "request": {
+            "url": "/api/todos",
+            "method": "GET"
+        },
+        "response": {
+            "headers": {
+                "content-type": "application/json"
+            },
+            "status": 200,
+            "body": [
+                {
+                    "id": 1,
+                    "name": "First todo",
+                    "done": false
+                },
+                {
+                    "id": 2,
+                    "name": "Second todo",
+                    "done": true
+                }
+            ]
+        }
+    }
+]
